@@ -1,7 +1,7 @@
 import { FILM_URL } from './api.js';
 import { imgMoveCovers } from './images.js';
 import { conteiner, films, loader } from './elements.js';
-import { showDetailsFilm } from './detaiksFilm.js';
+import { showDetailsFilm } from './detailsFilm.js';
 
 const checkingEpisode = (movie, imgCover) => {
   imgMoveCovers.forEach(cover => {
