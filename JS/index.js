@@ -1,8 +1,7 @@
 import { conteiner, films, home, loader, people, planets } from './elements.js';
-import { BASIC_URL, FILM_URL } from './api.js';
 
-import { showHomePage } from './home.js';
-import { showFilms } from './films.js';
+import { showHomePage } from './pageHome.js';
+import { showFilms } from './pageFilms.js';
 
 //!People
 
@@ -16,14 +15,6 @@ const showPeople = () => {
 const showPlanets = () => {
   loader.style.display = 'block';
   conteiner.innerHTML = '';
-};
-
-//! Details Film
-
-const showDetailsFilm = url => {
-  conteiner.innerHTML = '';
-  loader.style.display = 'block';
-  console.log(url);
 };
 
 films.addEventListener('click', showFilms);
