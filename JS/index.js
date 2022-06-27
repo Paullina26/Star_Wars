@@ -1,21 +1,8 @@
 import { conteiner, films, home, loader, people, planets } from './elements.js';
-
-import { showHomePage } from './pageHome.js';
-import { showFilms } from './pageFilms.js';
-
-//!People
-
-const showPeople = () => {
-  loader.style.display = 'block';
-  conteiner.innerHTML = '';
-};
-
-//!Planets
-
-const showPlanets = () => {
-  loader.style.display = 'block';
-  conteiner.innerHTML = '';
-};
+import { showHomePage } from './page_Home.js';
+import { showFilms } from './page_Films.js';
+import { showPeople } from './page_People.js';
+import { showPlanets } from './page_Planets.js';
 
 films.addEventListener('click', showFilms);
 home.addEventListener('click', showHomePage);

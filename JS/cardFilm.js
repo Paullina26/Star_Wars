@@ -1,4 +1,4 @@
-import { showDetailsFilm } from './detailsFilm.js';
+import { showDetailsFilm } from './subpage_Films_Details.js';
 import { conteiner } from './elements.js';
 import { imgMoveCovers } from './images.js';
 
