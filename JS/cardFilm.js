@@ -10,7 +10,7 @@ export const checkingEpisode = (movie, imgCover) => {
   });
 };
 
-export const createSingleCard = (film, isClickable) => {
+export const createSingleCardFilm = (film, isClickable) => {
   const cardMovie = document.createElement('div');
   cardMovie.className = 'movie';
   conteiner.appendChild(cardMovie);

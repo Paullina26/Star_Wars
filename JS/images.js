@@ -24,3 +24,5 @@ export const imgMoveCovers = [
     img: '/img/covers_films/episode_6.jpg',
   },
 ];
+
+export const imgPepole = [];
