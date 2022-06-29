@@ -1,10 +1,10 @@
 import { conteiner, films, home, loader, people, planets } from './elements.js';
 import { PEOPLE_URL } from './api.js';
-// import { createSingleCardPeople } from './cardPeople.js';
+import { createSingleCardPeople } from './cardPeople.js';
 
 const peopleCard = peoples => {
   peoples.forEach(people => {
-    // createSingleCardPeople(people, true);
+    createSingleCardPeople(people, true);
     console.log(people);
   });
 };

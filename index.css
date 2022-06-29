@@ -26,18 +26,6 @@ input {
 
 /* !Colors */
 
-/* :root {
-  --font-hover: rgba(246, 255, 0, 0.9);
-  --font: rgba(0, 254, 0, 0.8);
-  --border-one: rgba(0, 254, 0, 0.7);
-  --border-two: rgba(246, 255, 0, 0.7);
-  --border-three: rgb(0, 0, 0);
-  --shadow-one: rgba(0, 254, 0, 0.5);
-  --shadow-two: rgba(251, 251, 251, 0.619);
-  --shadow-three: rgb(0, 0, 0);
-  --backgraund-card: rgba(0, 0, 0, 0.45);
-} */
-
 :root {
   --font-hover: rgba(0, 254, 0, 0.8);
   --font: rgba(254, 241, 0, 1);
@@ -48,7 +36,7 @@ input {
   --shadow-one: rgba(255, 255, 255, 0.653);
   --shadow-two: rgba(0, 254, 0, 0.5);
   --shadow-three: rgb(0, 0, 0);
-  --backgraund-card: rgba(0, 0, 0, 0.45);
+  --backgraeinerund-card: rgba(0, 0, 0, 0.45);
   --loader-one: rgba(0, 254, 0, 0.7);
   --loader-two: rgb(216, 216, 216);
   --loader-shadow: rgba(0, 254, 0, 0.6);
@@ -74,6 +62,10 @@ h1 {
   color: var(--font);
 }
 
+h2 {
+  font-size: 25px;
+}
+
 p {
   font-size: 20px;
 }
@@ -95,35 +87,45 @@ a:hover {
   border-radius: 10px;
 }
 
-.movie {
+.movie,
+.cardPeople {
   border-radius: 10px;
   width: 300px;
   padding: 20px;
   margin: 30px auto;
 }
 
-.imgCover {
-  width: 300px;
-  height: 400px;
+.imgCover,
+.imgProfilePhoto {
+  width: 250px;
+  height: 350px;
   border-radius: 10px;
   border: 2px solid var(--border-three);
   box-shadow: 0px 0px 4px 3px var(--shadow-three),
     2px 2px 20px 10px var(--shadow-three);
 }
-.conteinerCover {
+.conteinerCover,
+.profilePhoto {
   margin: 20px auto;
 }
 
 .btn,
-.movie {
+.movie,
+.cardPeople {
   background-color: var(--backgraund-card);
   border-radius: 10px;
   border: 2px solid var(--border-one);
   box-shadow: 0 2px 10px 0 var(--shadow-one);
 }
 
+.movie,
+.cardPeople {
+  width: 300px;
+}
+
 .movie:hover,
-.btn:hover {
+.btn:hover,
+.cardPeople:hover {
   color: var(--font-hover);
   border: 2px solid var(--border-two);
   box-shadow: 0 2px 15px 0 var(--shadow-two);

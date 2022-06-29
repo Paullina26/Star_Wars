@@ -25,4 +25,9 @@ export const imgMoveCovers = [
   },
 ];
 
-export const imgPepole = [];
+export const imgPepole = [
+  {
+    name: 'Darth Vader',
+    img: 'img/noPicture.jpg',
+  },
+];
