@@ -2,29 +2,24 @@ import { conteiner } from './elements.js';
 // import { showPeople } from './page_People.js';
 import { imgPepole } from './images.js';
 
-export const checkingProfilePhoto = (people, imgProfile) => {
-  imgPepole.forEach(profile => {
-    if (profile.name === people.name) {
-      imgProfile.setAttribute('src', profile.img);
-    }
-  });
-};
+// export const checkingProfilePhoto = (people, imgProfile) => {
+//   imgPepole.forEach(profile => {
+//     if (profile.name === people.name) {
+//       imgProfile.setAttribute('src', profile.img);
+//     }
+//     // else {
+//     //   imgProfile.setAttribute('src', 'img/noPicture.jpg');
+//     // }
+//   });
+// };
 
-const specesPeople = (species_URL, species) => {
-  console.log(species_URL);
-  fetch(species_URL)
-    .then(response => response.json())
-    .then(data => {
-      characterDetails(data.name);
-      console.log(`specesPeople ${data.name}`);
-    });
-};
-
-const characterDetails = (detalis, species) => {
-  detalis.forEach(detal => {
-    console.log(species);
-    species.innerHTML = `Species: ${detal.name}`;
-    console.log(`characterDetails ${detal.name}`);
+const characterDetails = (urls, species) => {
+  urls.forEach(url => {
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        species.innerHTML = `Species: ${data.name}`;
+      });
   });
 };
 
@@ -47,15 +42,13 @@ export const createSingleCardPeople = (people, isClickable) => {
 
   const species = document.createElement('p');
   const speciesURL = people.species;
-  console.log(`zmianna speciesURL ${speciesURL}`);
-  // if (speciesURL) specesPeople(speciesURL[1]);
+  cardPeople.appendChild(species);
 
   if (people.species.length === 0) {
     species.innerHTML = `Species: Human`;
   } else {
     characterDetails(speciesURL, species);
   }
-  cardPeople.appendChild(species);
 
   // checkingProfilePhoto(people, imgProfile);
 
