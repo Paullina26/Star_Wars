@@ -1,17 +1,6 @@
 import { conteiner } from './elements.js';
-// import { showPeople } from './page_People.js';
 import { imgPepole } from './images.js';
-
-// export const checkingProfilePhoto = (people, imgProfile) => {
-//   imgPepole.forEach(profile => {
-//     if (profile.name === people.name) {
-//       imgProfile.setAttribute('src', profile.img);
-//     }
-//     // else {
-//     //   imgProfile.setAttribute('src', 'img/noPicture.jpg');
-//     // }
-//   });
-// };
+import { checkingImage } from './checkingImage.js';
 
 const characterDetails = (urls, species) => {
   urls.forEach(url => {
@@ -24,6 +13,8 @@ const characterDetails = (urls, species) => {
 };
 
 export const createSingleCardPeople = (people, isClickable) => {
+  conteiner.className = 'conteinerCardColumns';
+
   const cardPeople = document.createElement('div');
   cardPeople.className = 'cardPeople';
   conteiner.appendChild(cardPeople);
@@ -50,7 +41,10 @@ export const createSingleCardPeople = (people, isClickable) => {
     characterDetails(speciesURL, species);
   }
 
-  // checkingProfilePhoto(people, imgProfile);
+  checkingImage(imgPepole, people, profilePhoto, {
+    first: 'name',
+    second: 'name',
+  });
 
   if (isClickable)
     cardPeople.addEventListener('click', () => showPeopleDetalis(people.url));

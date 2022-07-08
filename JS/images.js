@@ -27,7 +27,35 @@ export const imgMoveCovers = [
 
 export const imgPepole = [
   {
+    name: 'R2-D2',
+    img: 'img/people/r2d2.jpeg',
+  },
+  {
     name: 'Darth Vader',
-    img: 'img/noPicture.jpg',
+    img: 'img/people/DaethVader.jpg',
+  },
+  {
+    name: 'Luke Skywalker',
+    img: 'img/people/LukeSkywalker.jpeg',
+  },
+  {
+    name: 'C-3PO',
+    img: 'img/people/C3PO.jpg',
+  },
+  {
+    name: 'Leia Organa',
+    img: 'img/people/LeiaOrgana.jpg',
+  },
+  {
+    name: 'Owen Lars',
+    img: 'img/people/OwenLars.jpg',
+  },
+  {
+    name: 'Beru Whitesun lars',
+    img: 'img/people/BeruWhitesunlars.jpg',
+  },
+  {
+    name: 'Obi-Wan Kenobi',
+    img: 'img/people/Obi-WanKenobi.jpg',
   },
 ];

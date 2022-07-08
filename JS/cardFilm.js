@@ -1,16 +1,11 @@
 import { showDetailsFilm } from './subpage_Films_Details.js';
 import { conteiner } from './elements.js';
 import { imgMoveCovers } from './images.js';
-
-export const checkingEpisode = (movie, imgCover) => {
-  imgMoveCovers.forEach(cover => {
-    if (cover.episode === movie.episode_id) {
-      imgCover.setAttribute('src', cover.img);
-    }
-  });
-};
+import { checkingImage } from './checkingImage.js';
 
 export const createSingleCardFilm = (film, isClickable) => {
+  conteiner.className = 'conteinerCardColumns';
+
   const cardMovie = document.createElement('div');
   cardMovie.className = 'movie';
   conteiner.appendChild(cardMovie);
@@ -34,7 +29,11 @@ export const createSingleCardFilm = (film, isClickable) => {
   const releaseDate = document.createElement('p');
   releaseDate.innerHTML = `Date Of Production: ${film.release_date}`;
   cardMovie.appendChild(releaseDate);
-  checkingEpisode(film, imgCover);
+
+  checkingImage(imgMoveCovers, film, imgCover, {
+    first: 'episode',
+    second: 'episode_id',
+  });
 
   if (isClickable)
     cardMovie.addEventListener('click', () => showDetailsFilm(film.url));

@@ -5,7 +5,6 @@ import { createSingleCardFilm } from './cardFilm.js';
 const filmCard = movies => {
   movies.forEach(movie => {
     createSingleCardFilm(movie, true);
-    console.log(movie);
   });
 };
 
